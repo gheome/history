@@ -1,0 +1,28 @@
+
+    <mat-toolbar color="primary">
+      <button
+        id="mobileMenuButton"
+        type="button"
+        mat-icon-button
+        (click)="showMobileMenu()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <ul id="mobileMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      <span class="logo">H<span class="is">IS</span>TORY</span>
+      <span class="spacer"></span>
+      <div class="menu-desktop">
+          <mat-icon aria-label="Side nav toggle icon">home</mat-icon>
+          <a mat-list-item href="#">Prima Pagină</a>
+          <mat-icon aria-label="Side nav toggle icon">work</mat-icon>
+          <a mat-list-item href="#">Servicii</a>
+          <mat-icon aria-label="Side nav toggle icon">landscape</mat-icon>
+          <a mat-list-item href="#">Locații</a>
+      </div>
+    </mat-toolbar>
+
+   

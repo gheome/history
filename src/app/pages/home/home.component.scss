@@ -1,0 +1,68 @@
+.palas{
+ 
+    background-image: url('../../../assets/images/palas.JPG');
+    background-position: center;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    
+    /* Set a background color that will be displayed
+       while the background image is loading */
+  }
+  #palat{
+    background-position: center;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  #more{
+    display: none;
+  }
+
+  #read{
+    margin-left: 20px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  p{
+    color:black;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+  }
+  
+  h1{
+    text-align: center;
+    font-size: 50px;
+    color: black;
+  }
+
+  .wrapper {
+    text-align: center;
+}
