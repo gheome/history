@@ -71,6 +71,12 @@ mat-toolbar a {
   display: none;
 }
 
+@media screen and (min-width: 600px) {
+  #mobileMenuButton, #mobileMenu{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .menu-desktop {
     display:none;
@@ -81,7 +87,10 @@ mat-toolbar a {
   #mobileMenu{
     margin-top:200px;
     background-color: brown;
-    left: 0;
+    margin-left: -70px;
+  }
+  .logo{
+    position: fixed;
   }
 }
 

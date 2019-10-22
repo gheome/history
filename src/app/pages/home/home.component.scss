@@ -1,23 +1,35 @@
 .palas{
- 
-    background-image: url('../../../assets/images/palas.JPG');
     background-position: center;
-    /* Background image doesn't tile */
     background-repeat: no-repeat;
-    
-    /* Background image is fixed in the viewport so that it doesn't move when 
-       the content's height is greater than the image's height */
     background-attachment: fixed;
-    
-    /* This is what makes the background image rescale based
-       on the container's size */
     background-size: cover;
     width: 100%;
     height: auto;
-    
-    /* Set a background color that will be displayed
-       while the background image is loading */
+    position: relative;
+}
+.top-center{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  font-family: 'Courier New', Courier, monospace;
+  color: #f07b69;
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  left: 50%;
+  top:15%;
+}
+
+@-webkit-keyframes welcome{
+  from {
+    left: -500px;
   }
+  to {
+    left: 50%;
+    top:15%;}
+}
+
+
   #palat{
     background-position: center;
     /* Background image doesn't tile */

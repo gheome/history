@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
   }
 
   read(){
@@ -34,7 +33,5 @@ export class HomeComponent implements OnInit {
       this.i = 0;
     }
   }  
-
-  
 
 }
