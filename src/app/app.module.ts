@@ -12,6 +12,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
+import { AgmCoreModule } from '@agm/core'
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { ItemService } from './services/item.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +33,14 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCjjVko5enczNu1Yggh-bx3Aox6g98_7BU'
+    }),
+    AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
