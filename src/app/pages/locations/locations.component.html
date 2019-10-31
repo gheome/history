@@ -1,1 +1,22 @@
-<p>locations works!</p>
+<app-navbar2></app-navbar2>
+
+<h1>Alege o locație</h1>
+
+<agm-map [zoom]="zoom" [latitude]="initlat" [longitude]="initlon" (mapClick)="showInfo($event)" [maxZoom]="maxZoom" [minZoom]="minZoom">
+    <ul>
+        <li *ngFor="let item of items">
+                <agm-marker [latitude]='item.latitude' [longitude]="item.longitude"></agm-marker>
+        </li>
+    </ul>
+</agm-map>
+
+<!-- <div *ngIf="items?.length > 0; else noItems">
+    <ul *ngFor = "let item of items" class="collection">
+        <li class="colletion-item">{{item.latitude}}</li>
+    </ul>
+</div>
+
+<ng-template #noItems>
+    <hr>
+    <h5>There are no items to list</h5>
+</ng-template> -->
