@@ -5,3 +5,17 @@ h1{
 agm-map {
     height: 300px;
   }
+
+.buttonsForDialog {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top:20px;
+}
+
+#cancel{
+    display: none;
+}
+#add{
+    display: none;
+}
