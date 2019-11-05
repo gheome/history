@@ -2,13 +2,24 @@
 
 <h1>Alege o locație</h1>
 
-<agm-map [zoom]="zoom" [latitude]="initlat" [longitude]="initlon" (mapClick)="showInfo($event)" [maxZoom]="maxZoom" [minZoom]="minZoom">
+<agm-map [zoom]="zoom" [latitude]="initlat" [longitude]="initlon" (mapClick)="chooseNewLocation($event)" [maxZoom]="maxZoom" [minZoom]="minZoom">
     <ul>
         <li *ngFor="let item of items">
                 <agm-marker [latitude]='item.latitude' [longitude]="item.longitude"></agm-marker>
         </li>
     </ul>
+    <agm-marker 
+        [latitude]='newLat'
+        [longitude]="newLng"
+        *ngIf="locationChosen">
+    </agm-marker>
 </agm-map>
+
+<div class="buttonsForDialog">
+    <button mat-button color="warn" mat-flat-button id="cancel" (click)="cancelOperation()">Anulează</button>
+    <button mat-button color="accent" mat-flat-button id="add">Adaugă locație nouă</button>
+</div>
+
 
 <!-- <div *ngIf="items?.length > 0; else noItems">
     <ul *ngFor = "let item of items" class="collection">

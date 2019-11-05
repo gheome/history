@@ -35,7 +35,8 @@ import { ItemService } from './services/item.service';
     MatIconModule,
     MatListModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCjjVko5enczNu1Yggh-bx3Aox6g98_7BU'
+      apiKey: 'AIzaSyCjjVko5enczNu1Yggh-bx3Aox6g98_7BU',
+      libraries: ["places", "geometry"]
     }),
     AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
     AngularFirestoreModule
