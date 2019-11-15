@@ -17,8 +17,8 @@ getItems(){
   return this.items;
 }
 
-onSubmit(){
-  this.afs.collection('locations').doc('tudor').set({latitude:100,longitude:100});
+onSubmit(data){
+  this.afs.collection('locations').doc(data.name).set({latitude:data.lat, longitude: data.lng, description: data.description, type: data.type});
 }
 
 }
