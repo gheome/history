@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../services/item.service';
 import { Item } from '../../models/Item';
+import { MatDialog } from '@angular/material';
+import { SaveLocationDialogComponent } from 'src/app/components/save-location-dialog/save-location-dialog.component';
 
 @Component({
   selector: 'app-locations',
@@ -17,14 +19,14 @@ export class LocationsComponent implements OnInit {
   items: Item[];
   newLat: number;
   newLng: number;
-  locationChosen = false;
-  
+  locationChosen = false;  
 
   coords = [
     {lat: 45,lon: 45},
     {lat: 60,lon: 60}
   ]
-  constructor(private itemService: ItemService) { }
+
+  constructor(private itemService: ItemService,public dialog: MatDialog) { }
 
   ngOnInit() {
     this.itemService.getItems().subscribe(items => {
@@ -35,7 +37,6 @@ export class LocationsComponent implements OnInit {
 
   }
   
-
   chooseNewLocation = (event) => {
     this.newLat = event.coords.lat;
     this.newLng = event.coords.lng;
@@ -55,6 +56,20 @@ export class LocationsComponent implements OnInit {
     addButton.style.display = "none";
     this.newLat = 0;
     this.newLng = 0;
+  }
+
+  openDialog = () => {
+    let dialogRef = this.dialog.open(SaveLocationDialogComponent,{data: {
+      lat: this.newLat,
+      lng: this.newLng
+    }});
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+      if(result == 'true'){
+        console.log("A mers");
+      }
+    })
   }
 
 }

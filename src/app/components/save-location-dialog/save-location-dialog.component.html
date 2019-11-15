@@ -1,0 +1,25 @@
+<h2>Completează datele</h2>
+<div class="formFields">
+    <mat-form-field class="button" >
+        <input matInput placeholder="Denumire" id="name">
+    </mat-form-field>
+    <mat-form-field class="button">
+        <input matInput placeholder="Descriere" id="description">
+    </mat-form-field>
+    <mat-form-field class="button"  >
+        <mat-label>Select an option</mat-label>
+        <mat-select [(ngModel)]="selectedOption" name="buildings">
+            <mat-option *ngFor="let item of items" [value]="item.name">
+                {{item.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <p class="button">Selectează o fotografie</p>
+    <input class="button" type="file" (change)="onFileSelected($event)">
+</div>
+
+<mat-dialog-actions class="confirmButtons">
+    <button mat-button mat-dialog-close="false" color="warn" mat-flat-button>Anulează</button>
+    <button mat-button mat-dialog-close="true" color="accent" mat-flat-button (click)="saveChanges()" id="save">Salvează</button>
+</mat-dialog-actions>
+  

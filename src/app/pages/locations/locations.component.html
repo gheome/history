@@ -5,7 +5,13 @@
 <agm-map [zoom]="zoom" [latitude]="initlat" [longitude]="initlon" (mapClick)="chooseNewLocation($event)" [maxZoom]="maxZoom" [minZoom]="minZoom">
     <ul>
         <li *ngFor="let item of items">
-                <agm-marker [latitude]='item.latitude' [longitude]="item.longitude"></agm-marker>
+                <agm-marker [latitude]='item.latitude' [longitude]="item.longitude" [label]="Test">
+                    <agm-info-window
+                    [latitude]="item.lat"
+                    [longitude]="item.lng">
+                        Informații
+                    </agm-info-window>
+                </agm-marker>
         </li>
     </ul>
     <agm-marker 
@@ -17,7 +23,7 @@
 
 <div class="buttonsForDialog">
     <button mat-button color="warn" mat-flat-button id="cancel" (click)="cancelOperation()">Anulează</button>
-    <button mat-button color="accent" mat-flat-button id="add">Adaugă locație nouă</button>
+    <button mat-button color="accent" mat-flat-button id="add" (click)="openDialog()">Adaugă locație nouă</button>
 </div>
 
 
