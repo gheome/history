@@ -1,0 +1,17 @@
+<div>
+  <a class='userLink' [routerLink]="['/users']">&lt;-Users</a>
+  <button class='logoutButton' (click)="logout()">Logout</button>
+</div>
+
+<ul class='catsList'>
+  <div class='gallery'>
+    <li *ngFor='let url of urls'>
+      <img class='catImage' src={{url}} />
+    </li>
+  </div>
+</ul>
+
+<div>
+  <button class='userLink' (click)='showCat()'>Show a cat</button>
+  <button class='userLink' (click)='deleteCat()'>Delete the cat</button>  
+</div>

@@ -1,0 +1,15 @@
+
+    <mat-toolbar color="primary">
+        <span class="logo">H<span class="is">IS</span>TORY</span>
+        <span class="spacer"></span>
+        <div class="menu-desktop">
+            <mat-icon aria-label="Side nav toggle icon">home</mat-icon>
+            <a mat-list-item [routerLink]="['/home']">Home</a>
+            <mat-icon aria-label="Side nav toggle icon">work</mat-icon>
+            <a mat-list-item [routerLink]="['/contact']">Contact us</a>
+            <mat-icon aria-label="Side nav toggle icon">landscape</mat-icon>
+            <a mat-list-item [routerLink]="['/locations']">Locations</a>
+            <button mat-button (click)="logout()">Logout</button>
+        </div>
+      </mat-toolbar>
+  

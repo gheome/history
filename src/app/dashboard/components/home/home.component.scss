@@ -1,0 +1,135 @@
+.palas{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url('https://palatulculturii.ro/web/upload/slider/palatul culturii iasi (2)_1.jpg');
+    margin-top: 20px;
+    transition: 1s ease-in-out;
+}
+.top-center{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 5vw;
+  font-family: 'Courier New', Courier, monospace;
+  color: #f07b69;
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  left: 50%;
+  top:15%;
+}
+
+@-webkit-keyframes welcome{
+  from {
+    left: -500px;
+  }
+  to {
+    left: 50%;
+    top:15%;}
+}
+
+
+  #palat{
+    background-position: center;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  #more{
+    display: none;
+    color: antiquewhite;
+  }
+
+  #read{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  p {
+    color:antiquewhite;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+  }
+  
+  h1{
+    text-align: center;
+    font-size: 50px;
+    color: black;
+  }
+
+  .wrapper {
+    text-align: center;
+}
+
+.redirect {
+    display: flex;
+    justify-content: center;
+}
+
+.locations {
+    padding: 20px;
+    color: brown;
+    background: #e7da24;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.container{
+  text-align: center;
+  padding-bottom: 50px;
+  margin-left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+.container span{
+  text-transform: uppercase;
+  display: block;
+}
+.text1{
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: text 1.5s 1;
+}
+@keyframes text {
+  0%{
+    color: black;
+  }
+  30%{
+    letter-spacing: 25px;
+  }
+  85%{
+    letter-spacing: 8px;
+  }
+}

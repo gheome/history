@@ -1,0 +1,68 @@
+<div class="topMenu">
+  <div class="logo">
+    <span class="logo-is">H<span class="is ">IS</span>TORY</span>
+  </div>
+  <div class="flex notifications">
+    <button mat-button [matMenuTriggerFor]="menu">
+      <div mat-card-avatar class="example-header-image"></div>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+  </div>
+  
+  </div>
+<div class="bigMenu">
+  <div class="leftMenu">
+    <div class="flex"> <i class="material-icons small-icon">home</i> <p class="leftMenuButton"><a [routerLink]="['/home']"><button mat-button class="leftMenuButton">Home</button></a></p> </div>
+    <div class="flex"> <i class="material-icons small-icon">my_location</i> <p class="leftMenuButton"><a [routerLink]="['/locations']"><button mat-button class="leftMenuButton">Locations</button></a></p> </div>
+    <div class="flex"> <i class="material-icons small-icon">message</i> <p class="leftMenuButton"><a [routerLink]="['/contact']"><button mat-button class="leftMenuButton">Contact</button></a></p> </div>
+  </div>
+  <div class="vl"></div>
+  <div class="rightMenu">
+    <div class="rightMenuTop">
+      <p class="dashboardTitle">Users</p>
+    </div>
+    <div class="rightMenuMid">
+      <mat-tab-group>
+        <mat-tab label="Users requests">
+          <ul class="list-of-users">
+            <li *ngFor="let user of usersRequests">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div class="credits">
+                    <mat-card-title>{{user.lastName}}</mat-card-title>
+                    <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+                  </div>
+                  <i class="material-icons">more_vert</i>
+                </mat-card-header>
+                <mat-card-actions class="actionsTypes">
+                  <button mat-button (click)="deleteUser(user)">Delete</button>
+                  <button mat-button (click)="disableUser(user)" [ngStyle]="{'background-color':user.approved ? 'transparent' : 'red' }">Disable</button>
+                  <button mat-button (click)="enableUser(user)" [ngStyle]="{'background-color':user.approved ? 'green' : 'transparent' }">Enable</button>
+                </mat-card-actions>
+              </mat-card>
+            </li>
+          </ul>
+        </mat-tab>
+        <mat-tab label="Messages from users">
+          <ul class="list-of-users">
+            <li *ngFor="let message of messages">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div class="credits">
+                    <mat-card-title class="emailMessage">{{message.email}}</mat-card-title>
+                    <mat-card-subtitle class="messageMessage">{{message.message}}</mat-card-subtitle>
+                  </div>
+                </mat-card-header>
+              </mat-card>
+            </li>
+          </ul>
+        </mat-tab>
+      </mat-tab-group>
+    </div> <!-- shadow box on bottom -->
+    <div class="list-of-users">
+      
+    </div>
+  </div>
+</div>

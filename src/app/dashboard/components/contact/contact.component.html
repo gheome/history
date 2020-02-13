@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<div class="contact-page">
+    <div class="contact-form">
+        <h1>Contact us</h1>
+        <form [formGroup]="formGroup">
+            <div class="txtb">
+                    <label>Full Name :</label>
+                    <input id="name" type="text" name="" value="" placeholder="Enter Your Name" formControlName="name">
+                </div>
+            
+                <div class="txtb">
+                    <label>Email :</label>
+                    <input id="email" type="text" name="" value="" placeholder="Enter Your Email" formControlName="email">
+                </div>
+            
+                <div class="txtb">
+                    <label>Phone Number :</label>
+                    <input id="phone" type="text" name="" value="" placeholder="Enter Your Phone Number" formControlName="phone">
+                </div>
+            
+                <div class="txtb">
+                    <label>Message :</label>
+                    <textarea id="message" formControlName="message"></textarea>
+                </div>
+                <button class="btn" (click)="sendValues()">Send</button>
+        </form>
+    </div>
+</div>

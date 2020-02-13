@@ -1,0 +1,72 @@
+h1{
+    text-align: center;
+}
+
+agm-map {
+    height: 300px;
+  }
+
+.buttonsForDialog {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top:20px;
+}
+
+#cancel{
+    display: none;
+}
+#add{
+    display: none;
+}
+
+.mat-dialog-container{
+    background: blue;
+}
+
+.text1{
+    color: #E7da24;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text 1.5s 1;
+  }
+  @keyframes text {
+    0%{
+      color: black;
+    }
+    30%{
+      letter-spacing: 25px;
+    }
+    85%{
+      letter-spacing: 8px;
+    }
+  }
+
+.list-of-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mat-card {
+    background: brown;
+    width:200px;
+    margin: 20px 0px;
+    max-height: 600px;
+}
+
+.title {
+    text-align: center;
+}
+
+.description {
+
+}
+
+.card {
+    
+}

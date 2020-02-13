@@ -1,0 +1,15 @@
+<div class='main'>
+  <p for='email' class='sign'>Register</p>
+  <form class="form" [formGroup]="registerForm" (submit)='registerUser($event)'>
+    <input class='inputButton' formControlName="firstName" type="text" placeholder="firstName">
+    <div class="invalidInput" *ngIf="!registerForm.controls.firstName.valid">First name is required</div>
+    <input class='inputButton' formControlName="lastName" type="text" placeholder="lastName">
+    <div class="invalidInput" *ngIf="!registerForm.controls.lastName.valid">Last name is required</div>
+    <input class='inputButton' formControlName="email" type="text" placeholder="email">
+    <div class="invalidInput" *ngIf="!registerForm.controls.email.valid">email is required</div>
+    <input class='inputButton' formControlName="password" type="password" placeholder="password">
+    <div class="invalidInput" *ngIf="!registerForm.controls.password.valid">At least 6 characters</div>
+    <input class='submit' type="submit" value="Register" [disabled]="!registerForm.valid">
+    <p class='sign'><a [routerLink]="['/login']">Go to login</a></p>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+  <div class='main'>
+      <p for='email' class='sign'>Sign in</p>
+      <form (submit)='loginUser($event)' class='form' [formGroup]="loginForm">
+        <input class='username' type='text' placeholder='email' formControlName="email" required>
+        <input class='password' type='password' placeholder='password' formControlName="password">
+        <input class='submit' type='submit' id='submit' [disabled]="!loginForm.valid">
+        <p class='register'><a [routerLink]="['/register']">Register</a></p>
+    </form>
+  </div>

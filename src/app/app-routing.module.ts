@@ -1,13 +1,49 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { LocationsComponent } from './pages/locations/locations.component';
-
+import { RegisterComponent } from './auth/components/register/register.component';
+import { DashboardComponent } from './dashboard/components/dashboard/dashboard.component';
+import { UsersComponent } from './dashboard/components/users/users.component';
+import { AuthGuard } from './auth.guard';
+import { LoginComponent } from './auth/components/login/login.component';
+import { LocationsComponent } from './dashboard/components/locations/locations.component';
+import { HomeComponent } from './dashboard/components/home/home.component';
+import { ContactComponent } from './dashboard/components/contact/contact.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: 'locations', component: LocationsComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full'}
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'users',
+    component: UsersComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'locations',
+    component: LocationsComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
@@ -15,4 +51,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, LocationsComponent]

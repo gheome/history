@@ -1,0 +1,65 @@
+.userLink {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient( #8C55AA, #3C55AA );
+  transition: all 0.45s;
+  border: 0;
+  margin-left: 3.6em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  &:hover{
+    background: linear-gradient( #3C55AA, #8C55AA );
+  }
+}
+
+.logoutButton {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient( #1C55AA, #3CA5AA );
+  transition: all 0.45s;
+  border: 0;
+  margin-left: 3.6em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  &:hover{
+    background: linear-gradient( #3CA5AA, #1C55AA );
+  }
+}
+
+.catImage {
+  width: 100%;
+  height: auto;
+  margin: 5px;
+  border: red;
+}
+
+.catsList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  margin: 10px 50px;
+}
+
+.gallery li img {
+    transition: 1s;
+    padding: 15px;
+    width: 200px;
+}
+
+.gallery li img:hover {
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
